@@ -5,9 +5,10 @@
 nnoremap <leader>h1 yypVr=
 nnoremap <leader>h2 yypVr-
 
-nnoremap <leader>tp :w <bar> silent ! md2pdf %<CR>
-nnoremap <leader>tw :w <bar> silent ! md2word %<CR>
-nnoremap <leader>tb :w <bar> silent ! md2beamer %<CR>
+" shortcut for pandoc
+nnoremap <leader>tp :w <bar> silent ! start pandoc -f markdown % -o %:r.pdf<CR>
+nnoremap <leader>tb :w <bar> silent ! start pandoc -f markdown -t beamer % -o %:r.pdf<CR>
+nnoremap <leader>tw :w <bar> silent ! start pandoc -f markdown -t docx % -o %:r.docx<CR>
 
 " need this because markdown imports HTML setting
 setlocal tabstop=4
