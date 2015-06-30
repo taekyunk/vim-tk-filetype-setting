@@ -6,8 +6,11 @@ nnoremap <leader>h1 yypVr=
 nnoremap <leader>h2 yypVr-
 
 " shortcut for pandoc
+" to pdf
 nnoremap <leader>tp :w <bar> silent ! start pandoc -f markdown % -o %:r.pdf<CR>
+" to beamer
 nnoremap <leader>tb :w <bar> silent ! start pandoc -f markdown -t beamer % -o %:r.pdf<CR>
+" to word
 nnoremap <leader>tw :w <bar> silent ! start pandoc -f markdown -t docx % -o %:r.docx<CR>
 
 " need this because markdown imports HTML setting
